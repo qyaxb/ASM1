@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp19
 {
-    internal class Student : Person
+    public class Student : User
     {
         public List<Course> Courses { get; set; }
 
@@ -15,3 +15,4 @@ namespace ConsoleApp19
             Courses = new List<Course>();
         }
     }
+}

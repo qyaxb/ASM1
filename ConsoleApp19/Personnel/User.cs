@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp19
 {
-    internal class Person
+    public class User
     {
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public Person(int id, string name)
+        public User(int id, string name)
         {
             Id = id;
             Name = name;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp19
 {
-    internal class Teacher : Person
+    public class Teacher : User
     {
         public string Department { get; set; }
 

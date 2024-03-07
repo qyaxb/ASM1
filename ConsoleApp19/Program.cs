@@ -11,33 +11,29 @@ namespace ConsoleApp19
     {        
             static void Main(string[] args)
             {
-                // Tạo đối tượng SchoolManagementSystem
-                var schoolSystem = new SchoolManagementSystem();
+            var schoolManager = new SchoolManager();
 
-                // Thêm giảng viên
-                var teacher1 = new Teacher(1, "John Doe", "Mathematics");
-                schoolSystem.AddTeacher(teacher1);
+            // Add teachers
+            var teacher1 = new Teacher(1, "John Doe", "Mathematics");
+            schoolManager.AddTeacher(teacher1);
 
-                // Thêm sinh viên
-                var student1 = new Student(1, "Alice");
-                schoolSystem.AddStudent(student1);
+            // Add students
+            var student1 = new Student(1, "Alice");
+            schoolManager.AddStudent(student1);
 
-                // Thêm khóa học
-                var course1 = new Course(1, "Math101", teacher1);
-                schoolSystem.AddCourse(course1);
+            // Add courses
+            var course1 = new Course(1, "Math101", teacher1);
+            schoolManager.AddCourse(course1);
 
-                // Hiển thị danh sách giảng viên
-                Console.WriteLine("Danh sách giảng viên:");
-                schoolSystem.ListTeachers();
+            // Display the list of teachers
+            schoolManager.DisplayTeachers();
 
-                // Hiển thị danh sách sinh viên
-                Console.WriteLine("\nDanh sách sinh viên:");
-                schoolSystem.ListStudents();
+            // Display the list of students
+            schoolManager.DisplayStudents();
 
-                // Hiển thị danh sách khóa học
-                Console.WriteLine("\nDanh sách khóa học:");
-                schoolSystem.ListCourses();
-            }
+            // Display the list of courses
+            schoolManager.DisplayCourses();
+        }
         }
     }
 
