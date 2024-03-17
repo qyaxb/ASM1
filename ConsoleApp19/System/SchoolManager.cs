@@ -36,6 +36,22 @@ namespace ConsoleApp19
         {
             courses.Add(course);
         }
+        public IEnumerable<Teacher> GetTeachers()
+        {
+            return teachers;
+        }
+
+        // Get all students
+        public IEnumerable<Student> GetStudents()
+        {
+            return students;
+        }
+
+        // Get all courses
+        public IEnumerable<Course> GetCourses()
+        {
+            return courses;
+        }
 
         // Display the list of teachers
         public void DisplayTeachers()

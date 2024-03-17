@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace ConsoleApp19
 {
     internal class Program
-    {        
-            static void Main(string[] args)
-            {
+    {
+        static void Main(string[] args)
+        {
             var schoolManager = new SchoolManager();
 
             // Add teachers
@@ -33,7 +33,38 @@ namespace ConsoleApp19
 
             // Display the list of courses
             schoolManager.DisplayCourses();
-        }
+
+            // Add 50 students
+            for (int i = 2; i <= 51; i++)
+            {
+                var student = new Student(i, $"Student_{i}");
+                schoolManager.AddStudent(student);
+            }
+
+            // Add 50 teachers
+            for (int i = 2; i <= 51; i++)
+            {
+                var teacher = new Teacher(i, $"Teacher_{i}", $"Subject_{i}");
+                schoolManager.AddTeacher(teacher);
+            }
+
+            // Add 50 courses
+            for (int i = 2; i <= 51; i++)
+            {
+                var teacher = new Teacher(i, $"Teacher_{i}", $"Subject_{i}");
+                var course = new Course(i, $"Course_{i}", teacher);
+                schoolManager.AddCourse(course);
+            }
+
+            // Display the updated list of teachers
+            schoolManager.DisplayTeachers();
+
+            // Display the updated list of students
+            schoolManager.DisplayStudents();
+
+            // Display the updated list of courses
+            schoolManager.DisplayCourses();
         }
     }
+}
 
